@@ -7,16 +7,32 @@
 </head>
 <body>
     <h1>Form Practice</h1>
-    <form action="">
+    <form action="" method="get" oninput="result.value = Number(a.value)+Number(b.value)">
 
         <label for="uname">Enter Username:</label>
-        <input type="text" id="uname" name="username" size="60" maxlength="3" placeholder="Enter username">
+        <input type="text" id="uname" name="username" size="60" maxlength="3" 
+        placeholder="Enter username" required>
         <br>
          <label for="pass">Enter Password:</label>
         <input type="password" id="pass" name="pass">
         <br>
          <label for="emailid">Enter Email:</label>
-        <input type="email" id="emailid" name="emailid">
+        <input type="email" id="emailid" name="emailid" autofocus>
+
+        <input list="courses">
+        <datalist id="courses">
+            <option>btech</option>
+            <option>bca</option>
+            <option>bsc</option>
+            <option>mba</option>
+        </datalist>
+
+        <p>Addition of two numbers:</p>
+        <input type="number" name="a" id="a" value="0">
+        +
+        <input type="number" name="b" id="b" value="0">
+        =
+        <output name="result"></output>
 
         <br>
         <p>Choose Course:</p>
@@ -40,6 +56,39 @@
         <p>Write Review:</p>
         <textarea name="review" id="review" rows="10" cols="80">Good</textarea>
 
+
+        <input type="date" name="dateid" id="dateid">
+        <br>
+        <input type="time" name="timeid" id="timeid">
+        <br>
+        <input type="color" name="colorid" id="colorid">
+        <br>
+        <input type="range" name="rangeid" id="rangeid" min="0" max="20">
+        <br>
+        <input type="url" name="urlid" id="urlid" placeholder="Enter URL">
+        <br>
+        <input type="tel" name="telid" id="telid">
+        <br>
+        <input type="search" name="searchid" id="searchid">
+        <br>
+        <input type="number" name="numberid" id="numberid" min="4" max="22" step="3">
+
+        <p>Choose State:</p>
+        <select name="state" id="state" size="2" multiple>
+            <option value="punjab">Punjab</option>
+            <option value="himachal" selected>Himachal Pradesh</option>
+            <option value="kerala">Kerala</option>
+        </select>
+
+        <br>
+        <label for="filefield">Select File</label>
+        <input type="file" name="filefield" id="filefield" accept="application/pdf">
+
+        <br>
+        <input type="submit" name="submitbtn" id="submitbtn">
+        <input type="reset" name="resetbtn" id="resetbtn">
+        <input type="image" name="imagebtn" id="imagebtn"
+         src="/Images/submitbutton.png" width="100" height="100">
 
 
 
